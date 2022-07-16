@@ -9,5 +9,23 @@ Notes:
 If either input is an empty string, consider it as zero.
 Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
 
+
+# 1
+
     def sum_str(a, b):
         return str(int(a or 0) + int(b or 0))
+
+
+# 2
+
+    def sum_str(a, b):
+        return str(int('0' + a) + int('0' + b))
+        
+        
+# 3
+    
+    def sum_str(a, b):
+        print(a, b)
+        if a == "" or a == None: a = "0"
+        if b == "" or b == None: b = "0"
+        return str(int(a)+int(b))
